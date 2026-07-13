@@ -1,0 +1,20 @@
+---
+name: build
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build jobs: null
+  runs-on: ubuntu-latest
+  steps:
+    - name: clone the repository
+      uses: actions/checkout@V4
+    - name: Install java 17
+      uses: actions/setup-java@V4
+      with:
+        java-version: "17"
+        distribution: tumerin
+        cache: maven
+    - name: build the java code
+      run: mvn clean install package
