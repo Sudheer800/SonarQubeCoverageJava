@@ -2,8 +2,7 @@
 name: build maven workflow
 on:
   push:
-    branches: 
-	 - master
+    branches: master
 jobs:
   build job:
     runs-on: ubuntu-latest
