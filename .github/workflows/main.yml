@@ -4,7 +4,7 @@ on:
   push:
     branches: master
 jobs:
-  build job:
+  build_job:
     runs-on: ubuntu-latest
     steps:
       - name: clone the repository
